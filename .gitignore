@@ -7,3 +7,9 @@ __pycache__/
 .env
 .env.*
 .claude/settings.local.json
+.playwright-mcp/
+# design-tool working files: captures, sketches, decision payloads
+.impeccable/review/
+.impeccable/mocks/
+.impeccable/questions/
+.impeccable/decision-payload.json

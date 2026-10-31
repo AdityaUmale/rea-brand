@@ -4,6 +4,21 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## [1.1.0] - 2026-10-31
+
+### Added
+- A shipped report template, `skills/rea-brand/report/build_report.py`, so every run produces the
+  same designed `brand.html`: the five findings on the first screen, stat tiles that link to their
+  evidence, SEEN / INFERRED pills (linkable), Stripe-style tables with numeric alignment and sticky
+  headers, contact sheets with linked engagement keys, a log-scale growth chart with a compact
+  phone version, copy-prompt panels, light and dark themes.
+- `DESIGN.md` and `PRODUCT.md` documenting the report's design system.
+
+### Changed
+- `SKILL.md` now builds the HTML with the template and documents its `brand.md` conventions
+  (stats, chart and prompt blocks, short-version format, contact-sheet names and sidecars).
+- The Dan Koe example uses the new conventions.
+
 ## [1.0.0] - 2026-10-31
 
 ### Added

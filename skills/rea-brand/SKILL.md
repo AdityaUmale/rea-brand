@@ -64,7 +64,7 @@ sign in, then come back here. A measured 6-platform run cost about 8¢ (118 call
 - An endpoint fails → `treg catalog search` the same job, try one alternative (named below where
   known) → else "unavailable".
 - Python does all math; every number shown comes from code output. Date every count. pandas,
-  scikit-learn and Pillow do the work; install them in a virtualenv if they are missing.
+  scikit-learn, Pillow and markdown do the work; install them in a virtualenv if they are missing.
 - Compare engagement only within a platform, never across platforms.
 - **Checkpoints.** After each step print a ◆ line: a 3-line finding, what the next step checks and
   its est. cost, then keep going. Stop and ask only at step 1's table, when spend runs 50% over the
@@ -216,8 +216,12 @@ posts → list them and call no pattern ("too few posts to call a pattern").
 
 **Look.** Download now (Instagram links expire within hours) the image, cover, first slide or
 thumbnail of every top-quarter post and 5 bottom posts into `<platform>/img/`. Build one contact
-sheet per platform and tier (a Pillow grid with each post's engagement under it) and open the
-sheets. A file that does not download is "not read", never described from its caption.
+sheet per platform and tier (a Pillow grid with each post's engagement under it), save them as
+`<platform>/img/sheet_<platform>_top.jpg` and `sheet_<platform>_bottom.jpg` (the report template
+looks for these names), plus a sidecar beside each, `sheet_<platform>_<tier>.json`: a list of
+`{"rank", "engagement", "url"}` in sheet order, which the report prints as linked captions. Match
+the cell shape to the media (portrait for Instagram and LinkedIn, 16:9 for YouTube and Shorts).
+Open the sheets. A file that does not download is "not read", never described from its caption.
 
 **Read** each post against its platform's checklist. What the text or image shows is SEEN; why it
 might work is INFERRED. Check the format split first: when one format holds most of the top
@@ -333,9 +337,25 @@ Which moves came right before growth sped up. Python only; everything is already
 - **Method notes:** endpoints called, skipped platforms and why, blocked pages, images not read,
   approximate dates, the date of every count, what is INFERRED or self-reported, no affiliation
   with PERSON. The bill: total and per step, and the balance before and after.
-- Deliver `brand.md` + one-file `brand.html` (light/dark, every source linked, the contact sheets
-  embedded as base64 so the file stands alone, a growth chart with moves pinned, a "Copy the
-  prompt" button per play) + the CSVs. End with the first play to run this week.
+- Deliver `brand.md` + one-file `brand.html` + the CSVs. End with the first play to run this week.
+- **Build the HTML with the shipped template**, never by hand:
+  `python3 <this skill's base directory>/report/build_report.py rea-brand/<person-slug>/brand.md`
+  (needs `pip install markdown`; Pillow is optional). It gives every run the same design: contents
+  sidebar, stat tiles, evidence pills, Stripe-style tables, growth chart, contact sheets and
+  copy-prompt buttons, light and dark. Write `brand.md` to its conventions:
+  - `# PERSON: personal brand teardown`, then one meta line (date, platforms, posts, calls, cost).
+  - A ```` ```stats ```` block before `## The short version`, one tile per line:
+    `VALUE | label | SEEN | source` (4 tiles; source is the post URL or a `#section` anchor such
+    as `#x`, `#instagram`, `#bill`, so every tile links to its evidence).
+  - `## The short version` as a numbered list of 5: each item a bold lead sentence, then one
+    sentence of detail with the key count (all five must fit the first screen), ending with a
+    "First play to run this week" line.
+  - A ```` ```chart ```` block under `## When he grew`: `point YYYY-MM VALUE LABEL` lines (from the
+    milestones), `pin YYYY-MM text` lines (dated moves), and one `caption` line.
+  - Each play's prompt in a ```` ```prompt ```` block.
+  - One `### <Platform>` heading per platform under the content section; contact sheets saved as
+    `<platform>/img/sheet_<platform>_top.jpg` and `_bottom.jpg` are placed under it automatically.
+  - Write SEEN and INFERRED as plain words; the template turns them into pills.
 
 ## 10 · Content report (content mode) — no calls
 
@@ -344,5 +364,6 @@ Which moves came right before growth sped up. Python only; everything is already
 - For the user (when handles were given): per platform, 5 ready hooks, titles or covers written
   from the formulas for the user's niche, and one paste-ready prompt that makes the first post.
 - Method notes as in step 9.
-- Deliver `content.md` + one-file `content.html` (light/dark, contact sheets, every post linked) +
-  the CSVs.
+- Deliver `content.md` + one-file `content.html` + the CSVs, built with the same template and
+  conventions as step 9: `python3 <this skill's base directory>/report/build_report.py
+  rea-brand/<person-slug>/content.md`.

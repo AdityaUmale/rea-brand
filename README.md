@@ -113,11 +113,13 @@ More in [examples/prompts.md](examples/prompts.md).
 
 ## What you get
 
+![The first screen of the Dan Koe report: four linked stat tiles and the five findings](docs/report.jpg)
+
 Everything lands in `rea-brand/<person>/`:
 
 | File | What's in it |
 |---|---|
-| `brand.html` | One-file report: light/dark, every source linked, contact sheets of top vs bottom posts, a growth chart with moves pinned, and a "Copy the prompt" button on every play |
+| `brand.html` | One-file report built by the skill's template: the five findings on the first screen, stat tiles that link to their evidence, SEEN / INFERRED labels on every claim, contact sheets of top vs bottom posts with linked engagement, a growth chart, a "Copy the prompt" button on every play, light and dark |
 | `brand.md` | The same report as Markdown |
 | `<platform>/posts.csv` | Every post pulled, in one format across platforms |
 | `<platform>/img/` | Top and bottom thumbnails, covers and cards |
@@ -181,8 +183,10 @@ The skill studies a **public brand**, not a person's private life:
 ## Repo layout
 
 ```
-skills/rea-brand/SKILL.md    the skill
-examples/dan-koe.md          a full real report
+skills/rea-brand/SKILL.md                 the skill
+skills/rea-brand/report/build_report.py   the report template (brand.md → brand.html)
+DESIGN.md, PRODUCT.md                     the report's design system and product notes
+examples/dan-koe.md                       a full real report
 examples/prompts.md          copy-paste prompts
 install.sh                   one-line installer
 .claude-plugin/              plugin + marketplace manifests

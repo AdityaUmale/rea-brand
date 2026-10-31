@@ -1,0 +1,458 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-31T23:55:00Z",
+  "title": "Design System: /rea-brand report",
+  "extensions": {
+    "colorMeta": {
+      "signal-blue": {
+        "role": "primary",
+        "displayName": "Signal Blue",
+        "canonical": "oklch(51.9% 0.223 264.5)",
+        "tonalRamp": [
+          "#010729",
+          "#081d57",
+          "#17378b",
+          "#2752c2",
+          "#4274ed",
+          "#6d9afe",
+          "#9fc3ff",
+          "#d7efff"
+        ]
+      },
+      "seen-green": {
+        "role": "secondary",
+        "displayName": "Seen Green",
+        "canonical": "oklch(51.2% 0.117 157.5)",
+        "tonalRamp": [
+          "#001301",
+          "#00320b",
+          "#005125",
+          "#007142",
+          "#319261",
+          "#57b481",
+          "#80dba7",
+          "#c7fedc"
+        ]
+      },
+      "inferred-amber": {
+        "role": "tertiary",
+        "displayName": "Inferred Amber",
+        "canonical": "oklch(49.4% 0.109 66.9)",
+        "tonalRamp": [
+          "#1d0200",
+          "#441200",
+          "#643000",
+          "#864f00",
+          "#a86f2c",
+          "#cc904f",
+          "#f4b675",
+          "#ffe6bc"
+        ]
+      },
+      "navy-ink": {
+        "role": "neutral",
+        "displayName": "Navy Ink",
+        "canonical": "oklch(22.3% 0.052 258.3)",
+        "tonalRamp": [
+          "#010a20",
+          "#14243d",
+          "#2f405b",
+          "#4c5f7b",
+          "#6a7e9d",
+          "#8ba0bf",
+          "#b0c6e6",
+          "#daf0ff"
+        ]
+      },
+      "slate-text": {
+        "role": "neutral",
+        "displayName": "Slate Text",
+        "canonical": "oklch(40.5% 0.038 257.3)",
+        "tonalRamp": [
+          "#030b1b",
+          "#182436",
+          "#334154",
+          "#505f73",
+          "#6f7e94",
+          "#90a0b7",
+          "#b5c6dd",
+          "#dff0ff"
+        ]
+      },
+      "slate-muted": {
+        "role": "neutral",
+        "displayName": "Slate Muted",
+        "canonical": "oklch(56.5% 0.032 256.5)",
+        "tonalRamp": [
+          "#040b18",
+          "#1a2533",
+          "#354151",
+          "#525f70",
+          "#717e91",
+          "#92a0b3",
+          "#b7c5d9",
+          "#e1f0ff"
+        ]
+      },
+      "slate-surface": {
+        "role": "neutral",
+        "displayName": "Slate Surface",
+        "canonical": "oklch(97.8% 0.003 247.9)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#232426",
+          "#3e4041",
+          "#5c5e5f",
+          "#7c7d7f",
+          "#9d9fa0",
+          "#c2c4c6",
+          "#edeff1"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(92.9% 0.010 252.8)",
+        "tonalRamp": [
+          "#080b0f",
+          "#212429",
+          "#3c4045",
+          "#5a5e63",
+          "#797e83",
+          "#9a9fa4",
+          "#c0c5ca",
+          "#eaeff5"
+        ]
+      },
+      "night-paper": {
+        "role": "neutral",
+        "displayName": "Night Paper (dark ground)",
+        "canonical": "oklch(17.6% 0.014 258.4)",
+        "tonalRamp": [
+          "#080b11",
+          "#20242b",
+          "#3b4047",
+          "#595e66",
+          "#787e86",
+          "#999fa7",
+          "#bfc5cd",
+          "#e9eff8"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper"
+      },
+      "slate-surface-2": {
+        "role": "neutral",
+        "displayName": "Slate Surface 2"
+      },
+      "hairline-strong": {
+        "role": "neutral",
+        "displayName": "Hairline Strong"
+      },
+      "signal-blue-soft": {
+        "role": "primary",
+        "displayName": "Signal Blue Soft"
+      },
+      "seen-green-bg": {
+        "role": "secondary",
+        "displayName": "Seen Green Tint"
+      },
+      "inferred-amber-bg": {
+        "role": "tertiary",
+        "displayName": "Inferred Amber Tint"
+      },
+      "night-surface": {
+        "role": "neutral",
+        "displayName": "Night Surface (dark theme)"
+      },
+      "night-surface-2": {
+        "role": "neutral",
+        "displayName": "Night Surface 2 (dark theme)"
+      },
+      "night-ink": {
+        "role": "neutral",
+        "displayName": "Night Ink (dark theme)"
+      },
+      "night-text": {
+        "role": "neutral",
+        "displayName": "Night Text (dark theme)"
+      },
+      "night-muted": {
+        "role": "neutral",
+        "displayName": "Night Muted (dark theme)"
+      },
+      "night-hairline": {
+        "role": "neutral",
+        "displayName": "Night Hairline (dark theme)"
+      },
+      "night-hairline-strong": {
+        "role": "neutral",
+        "displayName": "Night Hairline Strong (dark theme)"
+      },
+      "night-blue": {
+        "role": "primary",
+        "displayName": "Night Blue (dark theme)"
+      },
+      "night-blue-soft": {
+        "role": "primary",
+        "displayName": "Night Blue Soft (dark theme)"
+      },
+      "night-seen": {
+        "role": "secondary",
+        "displayName": "Night Seen (dark theme)"
+      },
+      "night-seen-bg": {
+        "role": "secondary",
+        "displayName": "Night Seen Bg (dark theme)"
+      },
+      "night-inferred": {
+        "role": "tertiary",
+        "displayName": "Night Inferred (dark theme)"
+      },
+      "night-inferred-bg": {
+        "role": "tertiary",
+        "displayName": "Night Inferred Bg (dark theme)"
+      },
+      "night-code": {
+        "role": "neutral",
+        "displayName": "Night Code (dark theme)"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Report title only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings; each becomes a contents entry."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Platform and play subheadings."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Bold first line of each numbered finding."
+      },
+      "stat-value": {
+        "displayName": "Stat Value",
+        "purpose": "The figure in a stat tile."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text at a 70ch measure."
+      },
+      "table": {
+        "displayName": "Table",
+        "purpose": "Evidence table cells."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Table heads, Contents title, prompt head, buttons."
+      },
+      "pill": {
+        "displayName": "Pill",
+        "purpose": "SEEN / INFERRED evidence pills only."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Prompt panel code only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "tile-lift",
+        "value": "0 1px 2px rgba(11,27,51,.06), 0 8px 24px -12px rgba(11,27,51,.12)",
+        "purpose": "Stat tiles only (light theme)."
+      },
+      {
+        "name": "tile-lift-dark",
+        "value": "0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6)",
+        "purpose": "Stat tiles only (dark theme)."
+      },
+      {
+        "name": "pill-link-ring",
+        "value": "inset 0 0 0 1px color-mix(in srgb, currentColor 28%, transparent)",
+        "purpose": "Marks an evidence pill that links to its source; full currentColor on hover."
+      },
+      {
+        "name": "focus-ring",
+        "value": "outline: 2px solid var(--accent); outline-offset: 2px",
+        "purpose": "Every focus-visible state."
+      },
+      {
+        "name": "topbar-glass",
+        "value": "background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: saturate(1.4) blur(10px)",
+        "purpose": "Sticky top bar only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Contents marker slide (350ms) and stat tile lift (200ms)."
+      },
+      {
+        "name": "state-fast",
+        "value": "150ms",
+        "purpose": "Colour, background and border changes on hover."
+      },
+      {
+        "name": "copy-confirm",
+        "value": "1800ms",
+        "purpose": "How long the copy button shows Copied before reverting."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Disables smooth scroll and the marker transition."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "1081px",
+        "purpose": "Sticky table heads."
+      },
+      {
+        "name": "tablet",
+        "value": "1080px",
+        "purpose": "Sidebar becomes a sticky chip row."
+      },
+      {
+        "name": "phone",
+        "value": "720px",
+        "purpose": "Two-up tiles, compact chart, scrolling tables."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Copy Button",
+      "kind": "button",
+      "refersTo": "button-copy",
+      "description": "Quiet bordered button in the prompt panel head; confirms in place.",
+      "html": "<button class=\"ds-copy\" type=\"button\"><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><rect x=\"5\" y=\"5\" width=\"8.5\" height=\"8.5\" rx=\"1.5\"/><path d=\"M10.5 2.5h-6a2 2 0 0 0-2 2v6\"/></svg><span>Copy the prompt</span></button> <button class=\"ds-copy ds-copy-done\" type=\"button\"><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><rect x=\"5\" y=\"5\" width=\"8.5\" height=\"8.5\" rx=\"1.5\"/><path d=\"M10.5 2.5h-6a2 2 0 0 0-2 2v6\"/></svg><span>Copied</span></button>",
+      "css": ":host{--bg:#ffffff;--surface:#f6f8fa;--ink:#0b1b33;--text:#3c4a5e;--muted:#6a7789;--line:#e3e8ee;--line-strong:#cfd7e1;--accent:#2457e6;--accent-soft:#e9efff;--seen:#0b7a4b;--seen-bg:#e5f5ec;--inf:#8a5300;--inf-bg:#fff2d6;--code:#f6f8fa;--shadow:0 1px 2px rgba(11,27,51,.06),0 8px 24px -12px rgba(11,27,51,.12);font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:var(--text)}.ds-copy{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 10px;font:600 12.5px Inter,sans-serif;cursor:pointer;transition:background .15s,border-color .15s,color .15s}.ds-copy:hover{border-color:var(--line-strong);background:var(--surface)}.ds-copy:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.ds-copy svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.5}.ds-copy-done{color:var(--seen);border-color:color-mix(in srgb,var(--seen) 40%,var(--line))}"
+    },
+    {
+      "name": "Theme Toggle",
+      "kind": "button",
+      "refersTo": "button-icon",
+      "description": "36px icon button in the top bar that switches light and dark.",
+      "html": "<button class=\"ds-icon-btn\" type=\"button\" aria-label=\"Switch light or dark theme\"><svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><circle cx=\"10\" cy=\"10\" r=\"3.6\"/><path d=\"M10 1.8v2.1M10 16.1v2.1M1.8 10h2.1M16.1 10h2.1M4.2 4.2l1.5 1.5M14.3 14.3l1.5 1.5M4.2 15.8l1.5-1.5M14.3 5.7l1.5-1.5\"/></svg></button>",
+      "css": ":host{--bg:#ffffff;--surface:#f6f8fa;--ink:#0b1b33;--text:#3c4a5e;--muted:#6a7789;--line:#e3e8ee;--line-strong:#cfd7e1;--accent:#2457e6;--accent-soft:#e9efff;--seen:#0b7a4b;--seen-bg:#e5f5ec;--inf:#8a5300;--inf-bg:#fff2d6;--code:#f6f8fa;--shadow:0 1px 2px rgba(11,27,51,.06),0 8px 24px -12px rgba(11,27,51,.12);font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:var(--text)}.ds-icon-btn{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:9px;border:1px solid var(--line);background:var(--bg);color:var(--text);cursor:pointer;transition:background .15s,border-color .15s}.ds-icon-btn:hover{background:var(--surface);border-color:var(--line-strong)}.ds-icon-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.ds-icon-btn svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}"
+    },
+    {
+      "name": "Evidence Pills",
+      "kind": "chip",
+      "refersTo": "pill-seen",
+      "description": "SEEN and INFERRED labels; a linked pill gains an inset ring.",
+      "html": "<span class=\"ds-pill ds-pill-seen\">Seen</span> <span class=\"ds-pill ds-pill-inferred\">Inferred</span> <a class=\"ds-pill ds-pill-seen ds-pill-link\" href=\"#\">Seen</a> <span class=\"ds-pill ds-pill-seen\">Seen · self-reported</span>",
+      "css": ":host{--bg:#ffffff;--surface:#f6f8fa;--ink:#0b1b33;--text:#3c4a5e;--muted:#6a7789;--line:#e3e8ee;--line-strong:#cfd7e1;--accent:#2457e6;--accent-soft:#e9efff;--seen:#0b7a4b;--seen-bg:#e5f5ec;--inf:#8a5300;--inf-bg:#fff2d6;--code:#f6f8fa;--shadow:0 1px 2px rgba(11,27,51,.06),0 8px 24px -12px rgba(11,27,51,.12);font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:var(--text)}.ds-pill{display:inline-block;font:650 11px/1 Inter,sans-serif;letter-spacing:.05em;text-transform:uppercase;padding:4px 7px;border-radius:999px;white-space:nowrap}.ds-pill-seen{color:var(--seen);background:var(--seen-bg)}.ds-pill-inferred{color:var(--inf);background:var(--inf-bg)}a.ds-pill-link{text-decoration:none;box-shadow:inset 0 0 0 1px color-mix(in srgb,currentColor 28%,transparent)}a.ds-pill-link:hover{box-shadow:inset 0 0 0 1px currentColor}a.ds-pill-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px}"
+    },
+    {
+      "name": "Stat Tile",
+      "kind": "card",
+      "refersTo": "stat-tile",
+      "description": "Evidence tile in the first viewport; the whole tile links to its source.",
+      "html": "<a class=\"ds-stat\" href=\"#\"><div class=\"ds-stat-value\">$0.081</div><div class=\"ds-stat-label\">data cost: 6 platforms, 501 posts, 118 calls</div><span class=\"ds-pill\">Seen</span></a>",
+      "css": ":host{--bg:#ffffff;--surface:#f6f8fa;--ink:#0b1b33;--text:#3c4a5e;--muted:#6a7789;--line:#e3e8ee;--line-strong:#cfd7e1;--accent:#2457e6;--accent-soft:#e9efff;--seen:#0b7a4b;--seen-bg:#e5f5ec;--inf:#8a5300;--inf-bg:#fff2d6;--code:#f6f8fa;--shadow:0 1px 2px rgba(11,27,51,.06),0 8px 24px -12px rgba(11,27,51,.12);font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:var(--text)}.ds-stat{position:relative;display:block;width:220px;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:15px 16px 14px;box-shadow:var(--shadow);text-decoration:none;color:inherit;transition:border-color .15s,transform .2s cubic-bezier(.16,1,.3,1)}.ds-stat:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--line));transform:translateY(-1px)}.ds-stat:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.ds-stat-value{font:680 28px/1.1 Inter,sans-serif;letter-spacing:-.02em;color:var(--ink);font-variant-numeric:tabular-nums;padding-right:56px}.ds-stat-label{margin-top:6px;font-size:13.5px;line-height:1.4;color:var(--muted)}.ds-pill{position:absolute;top:15px;right:14px;font:650 11px/1 Inter,sans-serif;letter-spacing:.05em;text-transform:uppercase;padding:4px 7px;border-radius:999px;color:var(--seen);background:var(--seen-bg)}"
+    },
+    {
+      "name": "Contents Sidebar",
+      "kind": "nav",
+      "refersTo": "toc-link",
+      "description": "Sticky contents list with a 2px blue marker that slides to the section in view.",
+      "html": "<nav class=\"ds-toc\"><p class=\"ds-toc-title\">Contents</p><div class=\"ds-toc-list\"><span class=\"ds-marker\"></span><a href=\"#\" class=\"ds-active\">The short version</a><a href=\"#\">Accounts</a><a href=\"#\">When he grew</a></div></nav>",
+      "css": ":host{--bg:#ffffff;--surface:#f6f8fa;--ink:#0b1b33;--text:#3c4a5e;--muted:#6a7789;--line:#e3e8ee;--line-strong:#cfd7e1;--accent:#2457e6;--accent-soft:#e9efff;--seen:#0b7a4b;--seen-bg:#e5f5ec;--inf:#8a5300;--inf-bg:#fff2d6;--code:#f6f8fa;--shadow:0 1px 2px rgba(11,27,51,.06),0 8px 24px -12px rgba(11,27,51,.12);font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:var(--text)}.ds-toc{width:216px}.ds-toc-title{font:600 12.5px Inter,sans-serif;color:var(--ink);margin:0 0 12px 12px}.ds-toc-list{position:relative}.ds-toc-list a{display:block;padding:6px 12px;border-radius:7px;color:var(--muted);text-decoration:none;font-size:14px;line-height:1.35;transition:color .15s}.ds-toc-list a:hover{color:var(--ink);background:var(--surface)}.ds-toc-list a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.ds-toc-list a.ds-active{color:var(--accent);font-weight:550}.ds-marker{position:absolute;left:0;top:0;width:2px;height:30px;background:var(--accent);border-radius:2px;transition:transform .35s cubic-bezier(.16,1,.3,1)}"
+    },
+    {
+      "name": "Evidence Table",
+      "kind": "custom",
+      "refersTo": "table-head",
+      "description": "Stripe-docs table: bordered wrapper, slate head, right-aligned tabular numbers.",
+      "html": "<div class=\"ds-table\"><table><thead><tr><th>Platform</th><th class=\"ds-num\">Followers</th><th class=\"ds-num\">Posts</th></tr></thead><tbody><tr><td>X</td><td class=\"ds-num\">1.2M</td><td class=\"ds-num\">120</td></tr><tr><td>YouTube</td><td class=\"ds-num\">1.6M</td><td class=\"ds-num\">80</td></tr></tbody></table></div>",
+      "css": ":host{--bg:#ffffff;--surface:#f6f8fa;--ink:#0b1b33;--text:#3c4a5e;--muted:#6a7789;--line:#e3e8ee;--line-strong:#cfd7e1;--accent:#2457e6;--accent-soft:#e9efff;--seen:#0b7a4b;--seen-bg:#e5f5ec;--inf:#8a5300;--inf-bg:#fff2d6;--code:#f6f8fa;--shadow:0 1px 2px rgba(11,27,51,.06),0 8px 24px -12px rgba(11,27,51,.12);font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:var(--text)}.ds-table{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--bg)}.ds-table table{width:100%;border-collapse:collapse;font-size:14.5px;font-variant-numeric:tabular-nums}.ds-table th{text-align:left;font-weight:600;font-size:12.5px;color:var(--muted);background:var(--surface);padding:10px 14px;border-bottom:1px solid var(--line)}.ds-table td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--text)}.ds-table tr:last-child td{border-bottom:0}.ds-table td:first-child{color:var(--ink);font-weight:500}.ds-table .ds-num{text-align:right}"
+    },
+    {
+      "name": "Prompt Panel",
+      "kind": "custom",
+      "refersTo": "prompt-panel",
+      "description": "Quiet code panel holding a paste-ready prompt with a copy button.",
+      "html": "<div class=\"ds-prompt\"><div class=\"ds-prompt-head\"><span>Prompt</span><button class=\"ds-copy\" type=\"button\"><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><rect x=\"5\" y=\"5\" width=\"8.5\" height=\"8.5\" rx=\"1.5\"/><path d=\"M10.5 2.5h-6a2 2 0 0 0-2 2v6\"/></svg><span>Copy the prompt</span></button></div><pre><code>Write one essay this week and publish it as an X Article the same day.</code></pre></div>",
+      "css": ":host{--bg:#ffffff;--surface:#f6f8fa;--ink:#0b1b33;--text:#3c4a5e;--muted:#6a7789;--line:#e3e8ee;--line-strong:#cfd7e1;--accent:#2457e6;--accent-soft:#e9efff;--seen:#0b7a4b;--seen-bg:#e5f5ec;--inf:#8a5300;--inf-bg:#fff2d6;--code:#f6f8fa;--shadow:0 1px 2px rgba(11,27,51,.06),0 8px 24px -12px rgba(11,27,51,.12);font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:var(--text)}.ds-prompt{border:1px solid var(--line);border-radius:12px;background:var(--code);overflow:hidden}.ds-prompt-head{display:flex;align-items:center;justify-content:space-between;padding:8px 8px 8px 14px;border-bottom:1px solid var(--line);font:600 12.5px Inter,sans-serif;color:var(--muted)}.ds-copy{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 10px;font:600 12.5px Inter,sans-serif;cursor:pointer}.ds-copy:hover{border-color:var(--line-strong);background:var(--surface)}.ds-copy svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.5}.ds-prompt pre{margin:0;padding:14px 16px;white-space:pre-wrap;font:13.5px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--ink)}"
+    },
+    {
+      "name": "Numbered Finding",
+      "kind": "custom",
+      "refersTo": "finding-number",
+      "description": "Short-version item: blue numbered badge, lead line, detail line.",
+      "html": "<ol class=\"ds-findings\"><li><p class=\"ds-lead\">One essay a week runs the whole machine.</p><p class=\"ds-detail\">Each letter goes out as an X Article the same day with the same title.</p></li><li><p class=\"ds-lead\">Long form wins on X now.</p><p class=\"ds-detail\">X Articles are 15 of his 23 top X posts.</p></li></ol>",
+      "css": ":host{--bg:#ffffff;--surface:#f6f8fa;--ink:#0b1b33;--text:#3c4a5e;--muted:#6a7789;--line:#e3e8ee;--line-strong:#cfd7e1;--accent:#2457e6;--accent-soft:#e9efff;--seen:#0b7a4b;--seen-bg:#e5f5ec;--inf:#8a5300;--inf-bg:#fff2d6;--code:#f6f8fa;--shadow:0 1px 2px rgba(11,27,51,.06),0 8px 24px -12px rgba(11,27,51,.12);font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:var(--text)}.ds-findings{list-style:none;padding:0;margin:0;counter-reset:f;max-width:70ch}.ds-findings li{counter-increment:f;position:relative;padding:11px 0 11px 44px;border-top:1px solid var(--line)}.ds-findings li:first-child{border-top:0}.ds-findings li::before{content:counter(f);position:absolute;left:0;top:12px;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font:650 13.5px/1 Inter,sans-serif;font-variant-numeric:tabular-nums}.ds-lead{margin:0;font:620 17.5px/1.4 Inter,sans-serif;letter-spacing:-.01em;color:var(--ink)}.ds-detail{margin:3px 0 0;font-size:15px;line-height:1.55;color:var(--text)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Audited Ledger",
+    "overview": "The report reads like good product documentation that has been audited. White paper, cool slate, navy ink and one confident blue: the category standard of Stripe docs and Notion, picked on purpose so that nothing competes with the findings. Pages are dense but calm. Hairline rules and soft slate panels separate content; there is no ornament, and every colour beyond the neutrals means something.\n\nTrust is the thing being designed. Evidence pills (SEEN in green, INFERRED in amber) are the only colour outside the blue accent. Every figure is set in tabular numerals, numeric table columns align right, and stat tiles link to the evidence behind them. The design never borrows the identity of the person being analysed; every report looks the same so the data is what changes.\n\nThe system rejects the dark, glowing analytics dashboard and the undifferentiated wall of doc text. Dark mode exists as a straight inversion of the same quiet system, not as a showpiece.",
+    "keyCharacteristics": [
+      "White and cool-slate grounds, navy ink, a single blue accent for links and the active state.",
+      "Green and amber appear only as evidence pills; colour carries meaning, never decoration.",
+      "Inter throughout, with tabular figures wherever numbers sit.",
+      "Hairline borders (1px) and rounded panels (12 to 14px); one soft ambient shadow, used only on stat tiles.",
+      "Sticky top bar and contents sidebar with a sliding active marker; the content column holds a 70ch measure.",
+      "Light and dark themes from one token set, toggled and remembered."
+    ],
+    "rules": [
+      {
+        "name": "The One Voice Rule",
+        "body": "Blue is the only accent. It marks where you can go and where you are; it never fills a large area.",
+        "section": "colors"
+      },
+      {
+        "name": "The Evidence Colour Rule",
+        "body": "Green and amber are reserved for SEEN and INFERRED. No other component may use them for decoration, status or emphasis (the copy confirmation reuses green because it is a confirmed, seen action).",
+        "section": "colors"
+      },
+      {
+        "name": "The Paired Theme Rule",
+        "body": "Every colour has a light and a dark value from the same token name; components reference the role, never a hex.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Figures Rule",
+        "body": "Any element that shows counts, money, dates or rank sets `font-variant-numeric: tabular-nums`; numeric table columns right-align (left on phones, where tables scroll).",
+        "section": "typography"
+      },
+      {
+        "name": "The Uppercase Is Evidence Rule",
+        "body": "Uppercase tracked text is the evidence pill's voice. Headings and labels stay in sentence case.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hairline First Rule",
+        "body": "Separate with a 1px hairline or a slate surface before reaching for a shadow. Panels, tables, prompts and charts are bordered, not lifted.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep blue as the only accent: links, the active state, the chart line, focus.",
+      "**Do** label findings with SEEN or INFERRED pills, and link the pill to its source when a source exists.",
+      "**Do** set every number in tabular figures and right-align numeric table columns on wide screens.",
+      "**Do** make stat tiles link to the evidence behind the figure.",
+      "**Do** separate content with 1px hairlines and slate surfaces; reserve the tile shadow for stat tiles.",
+      "**Do** define every colour for both themes under the same role name.",
+      "**Do** hold running text to a 70ch measure."
+    ],
+    "donts": [
+      "**Don't** use green or amber for anything other than evidence (and the confirmed copy state).",
+      "**Don't** borrow the analysed person's colours, fonts or imagery style.",
+      "**Don't** turn the report into a dark, glowing analytics dashboard: no gradients, glows or neon accents.",
+      "**Don't** add a second type family for display; hierarchy comes from Inter's weight and size steps.",
+      "**Don't** use uppercase tracked text outside the evidence pill."
+    ]
+  }
+}

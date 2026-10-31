@@ -1,18 +1,25 @@
 # Dan Koe: personal brand teardown
 
-> Example output of [`/rea-brand`](../README.md), unedited apart from this note. The HTML version and the raw data stay local. Numbers are as of 2026-10-31 and will change.
+> Example output of [`/rea-brand`](../README.md). The HTML version (built from this file by `skills/rea-brand/report/build_report.py`) and the raw data stay local. Numbers are as of 2026-10-31 and will change.
 
 Pulled 2026-10-31 · 6 platforms · 501 posts · 118 calls · **$0.081** · no affiliation with Dan Koe.
 
 Every finding is **SEEN** (a call result or an image shows it, linked) or **INFERRED** (reasoned from what was seen).
 
+```stats
+250.6M | views on his pinned X Article | SEEN | https://x.com/thedankoe/status/2010751592346030461
+5.2× | median views of his X Articles vs his other posts | SEEN | #x
+0 of 18 | top Instagram posts that show a face | SEEN | #instagram
+$0.081 | data cost: 6 platforms, 501 posts, 118 calls | SEEN | #bill
+```
+
 ## The short version
 
-1. **One essay a week runs the whole machine.** Each weekly Substack letter goes out as an X Article on the same day with the same title (7 of his top 10 X Articles match a letter, SEEN). Short lines from it become X posts, 12 of his 15 Threads posts are copied word for word from X the same day, and the same quote images go to Instagram and LinkedIn (same day or next). He described this system in 2022: "1 piece of content per week… ~2 hours a day" (SEEN, self-reported).
-2. **Long form wins on X now.** X Articles are 15 of his 23 top X posts, with a median of 2.0M views against 384K for his other posts (5.2x, SEEN). His pinned Article "How to fix your entire life in 1 day" (2026-01-12) has **250.6M views and 964K bookmarks** (SEEN).
-3. **He grew slowly, then jumped when he went multi-platform.** By his own count: 4K followers (Feb 2020), 25K (Dec 2020), 69K (Nov 2021). In Sept 2023 he wrote "Year 1: 10K. Year 2: 50K. Year 3: 100K. (Doubled down and diversified platforms.) Year 4: 2.8M" (SEEN, self-reported). His YouTube breakouts (Oct and Dec 2022) and his most-liked Instagram posts (Dec 2022) fall in that window (SEEN).
-4. **The look is monochrome and faceless, except on YouTube.** 0 of his 18 top Instagram posts show his face, and 18 of 18 top LinkedIn posts are white text on black. 16 of 16 top YouTube thumbnails show his face (SEEN).
-5. **The money comes from his own products, not sponsors.** He sells 5 courses at $99–$299, a $499 bundle and $39–$49 upsells, plus his app Eden. 0 of 10 YouTube videos checked carry a sponsor (SEEN).
+1. **One essay a week runs the whole machine.** Each Substack letter goes out as an X Article the same day with the same title (7 of his top 10), then as X posts, Threads copies and quote cards (SEEN #the-system-across-platforms).
+2. **Long form wins on X now.** X Articles are 15 of his 23 top X posts at 5.2× the median views, and his pinned Article has 250.6M views (SEEN #x).
+3. **He grew slowly, then jumped when he went multi-platform.** 4K followers in 2020 and 69K in 2021, then "Year 4: 2.8M" after he "diversified platforms" (SEEN, self-reported #when-he-grew).
+4. **The look is monochrome and faceless, except on YouTube.** 0 of 18 top Instagram posts show a face; 16 of 16 top YouTube thumbnails do (SEEN #instagram).
+5. **The money comes from his own products, not sponsors.** Five courses at $99–$299, a $499 bundle and his app Eden; 0 of 10 videos checked carry a sponsor (SEEN #how-he-makes-money).
 
 **First play to run this week:** write one 1,500-word essay and publish it natively as an X Article, then cut it into 5 short posts and 3 text-on-black images (plays 1–3).
 
@@ -30,6 +37,18 @@ Every finding is **SEEN** (a call result or an image shows it, linked) or **INFE
 All six are confirmed from his own link page ([thedankoe.eden.so](https://thedankoe.eden.so)) and website. None were skipped.
 
 ## When he grew
+
+```chart
+point 2020-02 4000 4K
+point 2020-06 9000 ~9K
+point 2020-12 25000 25K
+point 2021-11 69000 69K
+point 2026-10 1055000 1.05M
+pin 2022-11 YouTube + IG take off
+pin 2023-09 'Diversified' → 2.8M total
+pin 2026-01 Article: 250.6M views
+caption X followers from his own milestone posts (SEEN) and today's count, log scale. Dashed lines are dated moves. The line from 2021 to 2026 joins two known points; the path between them is not seen.
+```
 
 | Date | Platform | Signal | Evidence |
 |---|---|---|---|
