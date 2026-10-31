@@ -1,0 +1,22 @@
+{
+  "name": "rea-brand",
+  "version": "1.0.0",
+  "description": "Reverse engineer anyone's personal brand: every account, when they grew, who boosted them, how their posts are made, how they make money, and a playbook to copy with ready prompts. X, LinkedIn, Instagram, YouTube, Threads, Substack and more. Runs on treg.",
+  "author": {
+    "name": "Aditya Umale",
+    "url": "https://github.com/AdityaUmale"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/AdityaUmale/rea-brand",
+  "repository": "https://github.com/AdityaUmale/rea-brand",
+  "keywords": [
+    "personal-brand",
+    "creator-growth",
+    "reverse-engineering",
+    "content-strategy",
+    "claude-code",
+    "claude-skills",
+    "agent-skills",
+    "treg"
+  ]
+}

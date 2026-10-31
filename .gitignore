@@ -1,0 +1,9 @@
+# Run output: raw data, images and reports stay local
+/rea-brand/
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+.claude/settings.local.json

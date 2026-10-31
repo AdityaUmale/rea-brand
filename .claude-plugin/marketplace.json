@@ -1,0 +1,15 @@
+{
+  "name": "rea-brand",
+  "owner": {
+    "name": "Aditya Umale",
+    "url": "https://github.com/AdityaUmale"
+  },
+  "plugins": [
+    {
+      "name": "rea-brand",
+      "source": "./",
+      "description": "Reverse engineer anyone's personal brand across every platform they use, with a playbook you can copy.",
+      "license": "MIT"
+    }
+  ]
+}
