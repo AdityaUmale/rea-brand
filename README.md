@@ -185,7 +185,6 @@ The skill studies a **public brand**, not a person's private life:
 ```
 skills/rea-brand/SKILL.md                 the skill
 skills/rea-brand/report/build_report.py   the report template (brand.md → brand.html)
-DESIGN.md, PRODUCT.md                     the report's design system and product notes
 examples/dan-koe.md                       a full real report
 examples/prompts.md          copy-paste prompts
 install.sh                   one-line installer

@@ -4,6 +4,19 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## [1.1.1] - 2026-11-01
+
+### Fixed
+- The report builder no longer crashes on a malformed chart line; bad lines are skipped with a
+  warning, and a chart with fewer than 2 valid points shows a short note instead.
+- Files are read and written as UTF-8, so emoji and non-English names build on any OS.
+- Duplicate headings get unique link anchors; contact sheets without a sidecar no longer promise
+  an engagement key; a missing `markdown` package gives a clear install message.
+
+### Removed
+- Local design-tool notes (`PRODUCT.md`, `DESIGN.md`, `.impeccable/`) are no longer part of the
+  repository.
+
 ## [1.1.0] - 2026-10-31
 
 ### Added
@@ -12,7 +25,6 @@ All notable changes to this project are documented here. The format follows
   evidence, SEEN / INFERRED pills (linkable), Stripe-style tables with numeric alignment and sticky
   headers, contact sheets with linked engagement keys, a log-scale growth chart with a compact
   phone version, copy-prompt panels, light and dark themes.
-- `DESIGN.md` and `PRODUCT.md` documenting the report's design system.
 
 ### Changed
 - `SKILL.md` now builds the HTML with the template and documents its `brand.md` conventions

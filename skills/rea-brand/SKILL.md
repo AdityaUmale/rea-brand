@@ -351,7 +351,8 @@ Which moves came right before growth sped up. Python only; everything is already
     sentence of detail with the key count (all five must fit the first screen), ending with a
     "First play to run this week" line.
   - A ```` ```chart ```` block under `## When he grew`: `point YYYY-MM VALUE LABEL` lines (from the
-    milestones), `pin YYYY-MM text` lines (dated moves), and one `caption` line.
+    milestones; at least 2, or the report says there is not enough data), `pin YYYY-MM text` lines
+    (dated moves), and one `caption` line. Malformed lines are skipped with a warning.
   - Each play's prompt in a ```` ```prompt ```` block.
   - One `### <Platform>` heading per platform under the content section; contact sheets saved as
     `<platform>/img/sheet_<platform>_top.jpg` and `_bottom.jpg` are placed under it automatically.

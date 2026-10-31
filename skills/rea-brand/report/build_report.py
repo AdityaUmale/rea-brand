@@ -22,9 +22,13 @@ import io
 import json
 import math
 import re
+import sys
 from pathlib import Path
 
-import markdown
+try:
+    import markdown
+except ImportError:
+    sys.exit("build_report.py needs the markdown package: pip install markdown")
 
 try:
     from PIL import Image
@@ -129,25 +133,44 @@ def sheet_key(sidecar):
     if not sidecar.exists():
         return ""
     entries = []
-    for e in json.loads(sidecar.read_text()):
+    for e in json.loads(sidecar.read_text(encoding="utf-8")):
         text = f'#{e["rank"]} {int(e["engagement"]):,}'
         url = e.get("url")
         entries.append(f'<li><a href="{html.escape(url)}" target="_blank" rel="noopener">{text}</a></li>' if url else f"<li>{text}</li>")
     return f'<ol class="sheet-key" aria-label="Engagement of each post, in sheet order">{"".join(entries)}</ol>'
 
 
+DATE = re.compile(r"\d{4}-(0[1-9]|1[0-2])")
+
+
+def is_positive(text):
+    try:
+        return float(text) > 0
+    except ValueError:
+        return False
+
+
 def parse_chart(block):
+    """Read point / pin / caption lines; skip any malformed line with a warning instead of failing."""
     points, pins, caption = [], [], ""
-    for line in block.strip().splitlines():
-        kind, _, rest = line.strip().partition(" ")
-        if kind == "point":
-            date, value, label = rest.split(" ", 2)
-            points.append((date, float(value), label))
-        elif kind == "pin":
-            date, text = rest.split(" ", 1)
-            pins.append((date, text))
-        elif kind == "caption":
+    for raw in block.strip().splitlines():
+        line = raw.strip()
+        kind, _, rest = line.partition(" ")
+        if kind == "caption":
             caption = rest
+            continue
+        if kind == "point":
+            fields = rest.split(" ", 2)
+            if len(fields) == 3 and DATE.match(fields[0]) and is_positive(fields[1]):
+                points.append((fields[0], float(fields[1]), fields[2]))
+                continue
+        elif kind == "pin":
+            fields = rest.split(" ", 1)
+            if len(fields) == 2 and DATE.match(fields[0]):
+                pins.append((fields[0], fields[1]))
+                continue
+        if line:
+            print(f"chart: skipped malformed line: {line}", file=sys.stderr)
     return points, pins, caption
 
 
@@ -215,8 +238,9 @@ def chart_svg(points, pins, caption, compact):
 
 def render_chart(block):
     points, pins, caption = parse_chart(block)
-    if not points:
-        return ""
+    if len(points) < 2:
+        return ('<p class="chart-empty">Not enough dated follower counts to draw a growth curve'
+                f' ({len(points)} valid point{"" if len(points) == 1 else "s"}).</p>')
     legend = ""
     if pins:
         items = "".join(f'<li><span class="pin-key">{i + 1}</span>{html.escape(t)} '
@@ -279,7 +303,7 @@ def evidence_pills(fragment):
 
 def build(md_path, out_path):
     base = md_path.parent
-    text = md_path.read_text()
+    text = md_path.read_text(encoding="utf-8")
     blocks = {}
 
     def stash(kind, renderer):
@@ -307,7 +331,9 @@ def build(md_path, out_path):
                   body, flags=re.S)
     body = re.sub(r'<a href="(http[^"]+)"', r'<a href="\1" target="_blank" rel="noopener"', body)
 
-    # contact sheets under platform headings; every h3 gets an id so tiles can link to it
+    # contact sheets under platform headings; every h3 gets a unique id so tiles and pills can link to it
+    used_ids = set()
+
     def add_sheets(m):
         heading = m.group(1)
         slug = slugify(re.sub(r"<[^>]+>", "", heading))
@@ -318,10 +344,16 @@ def build(md_path, out_path):
             label = PLATFORM_NAMES.get(key, key.title())
             pair = [("Top quarter", top)] + ([("Bottom 5", bottom)] if bottom.exists() else [])
             for cap, p in pair:
+                key_row = sheet_key(p.with_suffix(".json"))
+                note = " · engagement of each post, in sheet order:" if key_row else ""
                 figs.append(f'<figure class="sheet"><img src="{inline_image(p)}" alt="{label}: {cap.lower()} posts" loading="lazy">'
-                            f'<figcaption><b>{cap}</b> · {label} · engagement of each post, in sheet order:</figcaption>'
-                            f'{sheet_key(p.with_suffix(".json"))}</figure>')
-        return f'<h3 id="{slug}">{heading}</h3>' + (f'<div class="sheets">{"".join(figs)}</div>' if figs else "")
+                            f'<figcaption><b>{cap}</b> · {label}{note}</figcaption>{key_row}</figure>')
+        base_id = slug or "section"
+        hid, n = base_id, 2
+        while hid in used_ids:
+            hid, n = f"{base_id}-{n}", n + 1
+        used_ids.add(hid)
+        return f'<h3 id="{hid}">{heading}</h3>' + (f'<div class="sheets">{"".join(figs)}</div>' if figs else "")
 
     body = re.sub(r"<h3>(.*?)</h3>", add_sheets, body)
 
@@ -347,7 +379,7 @@ def build(md_path, out_path):
     for key, value in (("TITLE", html.escape(title)), ("PERSON", html.escape(person)), ("WHO", who), ("META", meta_html),
                        ("TOC", "".join(toc)), ("BODY", "".join(sections)), ("REPO", REPO_URL), ("CSS", CSS), ("JS", JS)):
         page = page.replace(f"%%{key}%%", value)
-    out_path.write_text(page)
+    out_path.write_text(page, encoding="utf-8")
     return out_path
 
 
@@ -426,7 +458,7 @@ td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top;colo
 tr:last-child td{border-bottom:0}
 td:first-child{color:var(--ink);font-weight:500;white-space:nowrap}
 .chart{margin:24px 0 8px;padding:18px 18px 10px;border:1px solid var(--line);border-radius:14px;background:var(--bg)}
-.chart svg{width:100%;height:auto;display:block}.chart .chart-narrow,.chart .chart-legend{display:none}
+.chart svg{width:100%;height:auto;display:block}.chart-empty{padding:14px 18px;border:1px dashed var(--line-strong);border-radius:12px;color:var(--muted);font-size:14.5px}.chart .chart-narrow,.chart .chart-legend{display:none}
 .chart .pin-badge{fill:var(--bg);stroke:var(--line-strong)}.chart .pin-num{fill:var(--muted);font:650 11px Inter,sans-serif}
 .chart-legend{list-style:none;margin:10px 0 0;padding:0;font-size:13px;line-height:1.45;color:var(--text)}.chart-legend li{margin:0 0 4px;display:flex;gap:8px;align-items:baseline}
 .pin-key{flex:none;display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;border:1px solid var(--line-strong);font:650 10.5px/1 Inter,sans-serif;color:var(--muted)}.pin-date{color:var(--muted);white-space:nowrap}
